@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    color: #ffffff;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 15px 30px;
+    background-image: url('./assets/bg-barber.jpg');
+    background-size: cover;
+}
+
+.logo {
+    width: 150px;
+    margin: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-header {
+    margin: 0px 15px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.link-header {
+    padding-top: -10px;
+    font-size: 23px;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 20px;
+    font-style: none;
+    position: relative;
+}
+
+.link-header::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.link-header:hover::after {
+    width: 100%;
+}
+
+.agendar {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 20px;
+    width: 150px;
+    height: 50px;
+    background-color: #f0af38;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.agendar:hover {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+
+.services {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 20px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.services:hover {
+    color: #f0af38;
+    border-color: #f0af38;
+}
+
+.bg {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    z-index: -1;
+}
+
+main {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 8% 2%;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 170px;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 10px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:1030px) {
+
+    body {
+        background-image: url('./assets/bg-barber-responsive.jpg');
+        background-size: 150%;
+        height: 100vh;
+    }
+
+    .link-header {
+        display: none;
+    }
+
+    main {
+        width: 500px;
+        margin: 70% 3%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    body {
+        background-image: url('./assets/bg-barber-responsive-mobile.jpg');
+        background-size: 130%;
+    }
+
+
+    header {
+        width: 350px;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 20px 0px;
+    }
+
+    .agendar {
+        font-size: 16px;
+        width: 120px;
+        height: 40px;
+    }
+
+    main {
+        width: 350px;
+        margin: 80% 0%;
+    }
+
+    .services {
+        font-size: 16px;
+        width: 120px;
+        height: 40px;
+    }
+
+    .buttons {
+        gap: 120px;
+        margin-bottom: 30px;
+        margin-right: 20px;
+    }
+}
